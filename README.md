@@ -1,4 +1,4 @@
-## John Deere - Used Tractor Information (In Progress)
+## John Deere - Used Tractor Price Estimator (In Progress)
 
 ### Introduction:
 This project is focused on data collection and creating an ML model using this data. This will be a regression model that predicts the price of an item based on other continuous features.
