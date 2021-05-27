@@ -28,6 +28,6 @@ Microsoft Office Excel, Python (pandas, numpy, sci-kit learn), MySQL, Tableau Pu
 ### Summary:
 
 - Collected data relating to the pricing of John Deere tractors on the second hand market for model training 
-- Trained a Random Forest Regressor to predict the cost of tractors based on a number of features
+- Trained an AdaBoost regressor to predict the cost of tractors based on a number of features
 - More data is to be collected in order to make more accurate predictions: this is still a work in progress
 - Future plans include data manipulation and model tuning to increase accuracy once more data is collected, as well as a more comprehensive exploration using MySQL and data visualisation in Tableau. 
