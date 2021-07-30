@@ -14,7 +14,8 @@ The data is being retrieved on an ongoing basis and it contains features of John
 1) the first number in many of the models identifies the size of the tractor (i.e. a 6125R tractor is a size larger than a 5125R).
 2) The last three digits tell us how much horsepower the tractor has (i.e. a 6155M has 155 horsepower).
 3) The letter at the end of tells us the spec of the tractor (i.e. a 6155M is an ordinary spec tractor, whereas a 6155R is a higher spec tractor which will be more expensive).
-For older tractors it is more difficult to identify the size and horsepower of a tractor based on the model name itself, which is why there are separate columns containing the horsepower and weight figures for each tractor (which are used to make the predicions instead of the model name).
+
+For older tractors it is more difficult to identify the size and horsepower of a tractor based on the model name itself, which is why there are separate columns containing the horsepower and weight figures for each tractor (which are used to make the predictions instead of the model name).
 
 **Hours:** This column tells us how many hours the tractor has been used for. Tractors that have been used for fewer hours will cost more, as they are in most cases capable of doing more hours of work over their expected lifetime. The expected lifetime of most tractors is around 12,000-13,000 hours, after which they can become more expensive to maintain and therefore become much less valuable.
 
