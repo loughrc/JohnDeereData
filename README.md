@@ -6,6 +6,31 @@ This project is focused on data collection and creating an ML model using this d
 ### The Data:
 The data is being retrieved on an ongoing basis and it contains features of John Deere tractors that are on sale in the second hand market in the United Kingdom. It contains features with information about specific tractors that appear in ads on the second hand market that are likely to influence the cost of the machine to the buyer. These features range from static attributes that pertain to a specific model of tractor (such as Horsepower and Weight) to attributes that are specific to a certain instance of that model (i.e. numerous models with the same Horsepower and Weight can have different figures for Year of Production, or the number of Hours work the tractor has done). Both the static elements and elements that change depending on the instance can impact the price at which a used tractor is sold.
 
+### Features of the Dataset:
+
+**Make:** The brand the machine is made by. In this particular dataset the make for all tractors is John Deere
+
+**Model:** This is an identifier for each model (the identifiers are named by John Deere themselves) that helps us differentiate from each model of tractor. In some instances, especially of many models built since 2010, we can identify different features of the tractor through the model name:
+1) the first number in many of the models identifies the size of the tractor (i.e. a 6125R tractor is a size larger than a 5125R).
+2) The last three digits tell us how much horsepower the tractor has (i.e. a 6155M has 155 horsepower).
+3) The letter at the end of tells us the spec of the tractor (i.e. a 6155M is an ordinary spec tractor, whereas a 6155R is a higher spec tractor which will be more expensive).
+For older tractors it is more difficult to identify the size and horsepower of a tractor based on the model name itself, which is why there are separate columns containing the horsepower and weight figures for each tractor (which are used to make the predicions instead of the model name).
+
+**Hours:** This column tells us how many hours the tractor has been used for. Tractors that have been used for fewer hours will cost more, as they are in most cases capable of doing more hours of work over their expected lifetime. The expected lifetime of most tractors is around 12,000-13,000 hours, after which they can become more expensive to maintain and therefore become much less valuable.
+
+**Year:** This column tells us the year the tractor was originally sold to its first buyer. Newer tractors generally cost more, even if they have been worked for a large number of hours.
+
+**HP:** This tells us how many horsepower a tractor has.
+
+**Weight in Kg:** This tells us the weight of the tractor in kg without including extra attachments.
+
+**Price ex VAT:** The price the tractor is currently for sale on the Farmers Weekly website, excluding VAT.
+
+**ID:** This is a simple identifier used to uniquely identify each tractor in the dataset.
+
+**Front Loader:** This tells us whether a tractor is fitted with a front loader. This is an optional extra on most tractors and generally costs a few thousand euro/pounds extra along with the tractor itself, and therefore will add a few thousand euros/pounds of value to a second hand tractor for sale on the market.
+
+
 ### Project Overview:
 The original data file was created in Microsoft Excel to be loaded into pandas as a single dataframe. An adaboost regressor was trained to make predictions on unlabelled instances using the small amount of data that has been collected so far. The model outlined in the original notebook achieved an r-squared score of 0.62, but this figure can vary and normally turns out slightly lower, between 0.55 and 0.6. These figures are low because we are training with a very small number of instances; when more data is collected for training we will achieve more accurate scores, after which we can begin more specific data manipulation and algorithm tuning tasks to increase prediction accuracy. The second version of the notebook consists of a model trained with more data; this resulted in a large increase in the r-squared score to 0.81, though the MAE and RMSE scores remained largely the same, with only minor improvements. The next development will expand the dataset further and employ data cleaning techniques such as outlier removal and feature engineering in an attempt to improve the MAE and RMSE scores.
 
